@@ -1,27 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { fetchApi } from "../helpers/axios.js";
+import React, { useState } from "react";
+
+import { useFilter } from "../hook/useUser";
 import CardComponet from  "./CardComponent.js";
 
 export const Users = () => {
-  const [user, setUser] = useState([]);
+  const [getUsersFilteredBy, deleteUsers] = useFilter();
+  const [text, setText] = useState('');
 
-  const getAllUsers = async () => {
-    try {
-      const getUsers = await fetchApi( 'results=15', 'GET' );
-        console.log(getUsers.data.results);
-        setUser(getUsers.data.results);
-    } catch (error) {}
-  };
-
-  useEffect(() => {
-    getAllUsers();
-  }, [])
+  const handleChange = (value) => setText(value.target.value)
 
 
   return (
   <div>
+    <div>
+      <input type="text"  onChange={handleChange} />
+    </div>
     <div className="container">
-      { user.map(user => <CardComponet key={user.id} user={user} />) }
+      { getUsersFilteredBy(text).map(user => <CardComponet onDelete={ deleteUsers } key={user.email} user={user} />) }
     </div>
   </div>
   );
