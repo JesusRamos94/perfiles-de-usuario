@@ -12,8 +12,8 @@ export const useFilter = ( ) => {
     };
 
     const handlerFilter = ( target )=>{
-        const reg = new RegExp( target ,'ig')
-        return users.filter(user => reg.test(user.name.first) ||  reg.test(user.name.last) )
+        const reg = new RegExp( target ,'ig');
+        return users.filter(user => reg.test(user.name.first) ||  reg.test(user.name.last) );
     }
 
     const deleteUsers = (email) => {
@@ -26,4 +26,4 @@ export const useFilter = ( ) => {
     }, []);
 
     return [handlerFilter, deleteUsers];
-}
+};

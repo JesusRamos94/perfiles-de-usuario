@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import {BsSearch} from 'react-icons/bs'
-
+import {BsSearch} from 'react-icons/bs';
 import { useFilter } from "../hook/useUser";
 import CardComponet from "./CardComponent.js";
 

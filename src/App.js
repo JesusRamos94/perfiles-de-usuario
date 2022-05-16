@@ -6,6 +6,6 @@ function App() {
         <AppRoute />
     </div>
   );
-}
+};
 
 export default App;

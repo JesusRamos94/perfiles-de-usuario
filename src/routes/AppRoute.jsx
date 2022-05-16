@@ -4,9 +4,6 @@ import { Users } from '../components/Users';
 
 export const AppRoute = () => {
 
-
-
-
   return (
     <Router>
         <Routes>
@@ -14,4 +11,4 @@ export const AppRoute = () => {
         </Routes>
     </Router>
   )
-}
+};

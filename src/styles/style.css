@@ -14,45 +14,14 @@ html{
     background-color: whitesmoke;
     padding: 0px;
   }
+  
   h1{
     text-align: center;
     font-size: 3rem;
-    color: #1258ba ;
+    color:  #5c9fff;
     margin-bottom: 32px;
     position: relative;
     z-index: 2;
-  }
-
-  .page{
-    margin: 0px;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .page:before{
-    content: '';
-    position: absolute;
-    width: 100vw;
-    height: 100vw;
-    background-color: #aacdff;
-    border-radius: 100%;
-    top: -50vw;
-    right: -50vw;
-    z-index: -1;
-  }
-
-  .page:after{
-    content: '';
-    position: absolute;
-    width: 100vw;
-    height: 100vw;
-    background-color: #2e83f9;
-    border-radius: 100%;
-    bottom: -50vw;
-    left: -50vw;
-    z-index: -1;
   }
 
   .container {
@@ -87,6 +56,10 @@ html{
   .card > *{
     margin: 0;
     padding: 0;
+  }
+
+  .cell{
+    color:#5c9fff
   }
   
   span{
@@ -188,7 +161,6 @@ html{
     position: absolute;
     top: calc(50% - 8px);
     right: 16px;
-
   }
 
 
